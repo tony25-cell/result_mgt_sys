@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Result Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Result Management System</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('students') }}">Students</a></li>
+                    <li><a href="{{ url_for('add_student') }}">Add Student</a></li>
+                    <li><a href="{{ url_for('add_result') }}">Add Result</a></li>
+                    <li><a href="{{ url_for('search') }}" class="active">Search</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h2>Search Students</h2>
+            
+            <div class="search-container">
+                <form action="{{ url_for('search') }}" method="post">
+                    <div class="search-box">
+                        <input type="text" name="search_term" placeholder="Enter roll number, name or email..." required>
+                        <button type="submit" class="btn btn-search">Search</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="search-instructions">
+                <h3>Search Tips</h3>
+                <ul>
+                    <li>Search by Mat number (e.g., 6331)</li>
+                    <li>Search by student name (e.g., samuel)</li>
+                    <li>Search by email address</li>
+                </ul>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Student Result Management System</p>
+        </footer>
+    </div>
+</body>
+</html>
