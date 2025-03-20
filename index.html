@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Result Management System</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -12,11 +12,11 @@
             <h1>Student Result Management System</h1>
             <nav>
                 <ul>
-                    <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
-                    <li><a href="{{ url_for('students') }}">Students</a></li>
-                    <li><a href="{{ url_for('add_student') }}">Add Student</a></li>
-                    <li><a href="{{ url_for('add_result') }}">Add Result</a></li>
-                    <li><a href="{{ url_for('search') }}">Search</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="students.html">Students</a></li>
+                    <li><a href="add_student.html">Add Student</a></li>
+                    <li><a href="add_result.html">Add Result</a></li>
+                    <li><a href="search.html">Search</a></li>
                 </ul>
             </nav>
         </header>
@@ -31,7 +31,7 @@
                 <div class="action-card">
                     <h3>Students</h3>
                     <p>View and manage all student records</p>
-                    <a href="{{ url_for('students') }}" class="btn">View Students</a>
+                    <a href="students.html" class="btn">View Students</a>
                 </div>
                 
                 <div class="action-card">
