@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Result Management System</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+                    <li><a href="{{ url_for('students') }}">Students</a></li>
+                    <li><a href="{{ url_for('add_student') }}">Add Student</a></li>
+                    <li><a href="{{ url_for('add_result') }}">Add Result</a></li>
+                    <li><a href="{{ url_for('search') }}">Search</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="dashboard">
+            <div class="welcome-section">
+                <h2>Welcome to the Result Management System</h2>
+                <p>Manage student results efficiently with our easy-to-use platform.</p>
+            </div>
+            
+            <div class="quick-actions">
+                <div class="action-card">
+                    <h3>Students</h3>
+                    <p>View and manage all student records</p>
+                    <a href="{{ url_for('students') }}" class="btn">View Students</a>
+                </div>
+                
+                <div class="action-card">
+                    <h3>Add Student</h3>
+                    <p>Register a new student in the system</p>
+                    <a href="{{ url_for('add_student') }}" class="btn">Add Student</a>
+                </div>
+                
+                <div class="action-card">
+                    <h3>Add Result</h3>
+                    <p>Enter new examination results</p>
+                    <a href="{{ url_for('add_result') }}" class="btn">Add Result</a>
+                </div>
+                
+                <div class="action-card">
+                    <h3>Search</h3>
+                    <p>Find students and their results</p>
+                    <a href="{{ url_for('search') }}" class="btn">Search</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Student Result Management System</p>
+        </footer>
+    </div>
+</body>
+</html>
